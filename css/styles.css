@@ -491,23 +491,31 @@ a:hover, a:focus {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     display: flex;
     flex-direction: column;
     background: #FCFCFC;
-    padding: 24px;
+    padding: 72px 24px 24px 24px;
     border-radius: 4px;
     width: 408px;
+    min-height: 584px;
     box-shadow: 0px 1px 1px 0px #00000024, 0px 1px 3px 0px #0000001F, 0px 2px 1px 0px #00000033;
-    position: relative;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close-modal {
-    position: relative;
+    position: absolute;
     background: #E7E9FC;
+    padding: 0;
+    top: 24px;
+    right: 24px;
     width: 24px;
     height: 24px;
-    border: 1px solid #0000001A;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     font-size: 24px;
     cursor: pointer;
     border-radius: 50%;
@@ -515,15 +523,30 @@ a:hover, a:focus {
     align-items: center;
     justify-content: center;
     align-self: flex-end;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close-modal:hover,
+.close-modal:focus {
+    background-color: #404bbf;
+    border: none;
+
 }
 .icon-close {
     fill: #2E2F42;
     display: flex;
     align-items: center;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.icon-close:hover,
+.icon-close:focus {
+    fill: #ffffff;
 }
 .modal-form {
     display: flex;
     flex-direction: column;
+}
+.form-group {
+    margin-bottom: 8px;
 }
 .input-group {
     position: relative;
@@ -630,5 +653,5 @@ a:hover, a:focus {
     text-align: center;
     color: #2E2F42;
     margin-top: 24px;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
 }
