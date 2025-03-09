@@ -535,12 +535,21 @@ a:hover, a:focus {
     left: 10px;
     padding: 3px;
     fill: #2E2F42;
+    transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input {
     width: 100%;
-    padding: 11px 16px 11px 28px;
+    padding: 11px 16px 11px 38px;
     border: 1px solid #2E2F4266;
     border-radius: 4px;
+    transition: border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input:focus {
+    border-color: #4D5AE5;
+    outline: none;
+}
+.input:focus + .input-icon {
+    fill: #4D5AE5;
 }
 .textarea {
     padding: 8px 16px;
@@ -549,7 +558,11 @@ a:hover, a:focus {
     resize: none;
     width: 360px;
     height: 120px;
-
+    transition: border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.textarea:focus {
+    border-color: #007bff;
+    outline: none;
 }
 ::placeholder {
     font-weight: 400;
@@ -584,10 +597,6 @@ a:hover, a:focus {
     text-decoration: underline;
     text-decoration-style: solid;
     color: #4D5AE5;
-}
-.checkbox-label svg {
-    width: 16px;
-    height: 16px;
 }
 .input-checkbox {
     width: 16px;
