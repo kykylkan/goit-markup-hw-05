@@ -545,31 +545,35 @@ a:hover, a:focus {
     display: flex;
     flex-direction: column;
 }
-.form-group {
-    margin-bottom: 8px;
-}
 .input-group {
     position: relative;
+}
+.form-group {
+    position: relative;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    margin-bottom: 8px;
 }
 .input-icon {
     position: absolute;
-    left: 10px;
-    padding: 3px;
+    left: 16px;
+    top: 50%;
     fill: #2E2F42;
-    transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input {
     width: 100%;
-    padding: 11px 16px 11px 38px;
-    border: 1px solid #2E2F4266;
+    height: 40px;
+    padding-left: 38px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
-    transition: border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: transparent;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input:focus {
     border-color: #4D5AE5;
-    outline: none;
 }
 .input:focus + .input-icon {
     fill: #4D5AE5;
@@ -597,8 +601,8 @@ a:hover, a:focus {
 .input-label {
     font-weight: 400;
     font-size: 12px;
-    line-height: 14px;
-    letter-spacing: 4%;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
     color: #8E8F99;
     margin-bottom: 4px;
     margin-top: 8px;
@@ -654,4 +658,41 @@ a:hover, a:focus {
     color: #2E2F42;
     margin-top: 24px;
     margin-bottom: 16px;
+}
+
+
+.footer-subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.subscribe-input {
+    background-color: blue;
+    border-radius: 4px;
+    padding: 10px;
+    border: none;
+    color: white;
+    font-size: 16px;
+}
+
+.subscribe-input::placeholder {
+    color: white;
+    opacity: 0.8;
+}
+
+.subscribe-button {
+    display: flex;
+    align-items: center;
+    background-color: blue;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.subscribe-button svg {
+    margin-left: 8px;
 }
