@@ -629,8 +629,6 @@ a:hover, a:focus {
 }
 .checkbox-label {
     position: relative;
-    display: inline-flex;
-    align-items: center;
     cursor: pointer;
     font-weight: 400;
     font-size: 12px;
@@ -674,6 +672,7 @@ a:hover, a:focus {
 input[type="checkbox"]:checked + .checkbox-label .input-checkbox {
     border: none;
     background-color: var(--blue);
+    fill: #F4F4FD;
 }
 input[type="checkbox"]:checked + .checkbox-label + .input-checkbox .checkbox-icon {
     fill: #F4F4FD;
